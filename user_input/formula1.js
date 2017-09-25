@@ -15,13 +15,27 @@ export default class Inputs extends Component {
 
   constructor(props) {
       super(props);
-      this.state = {value:''};
+    this.state = { text1: '' } ;
+    this.state ={ text2: ''};
+    this.state={text3:''}
+
 
   }
-handleChange = (text) => {
-  this.setState({value : text })
+handleChangeax = (ax) => {
+  this.setState({ text1: ax })
   }
 
+handleChangephase = (phase) => {
+  this.setState({text2: phase})
+  }
+
+handleChangeay = (ay) => {
+  this.setState({text3: ay})
+  }
+
+//getValue = (value) => {
+//  alert('hello' + value)
+//}
 
 render(){
   return (
@@ -33,37 +47,48 @@ render(){
         </View>
         <View>
           <TextInput style ={styles.line1}
+          name="value of ax"
+          keyboardType="numeric"
           underlineColorAndroid = "black"
-          onChangeText={this.handleChange}
-          value={this.state.value} />
+          onChangeText={this.handleChangeax}
+          value={this.state.test1}/>
         </View>
         <View>
           <Text style={styles.text2}>)cos[wt-Bz+(</Text>
         </View>
         <View>
           <TextInput style ={styles.line1}
+          name="value of phase"
+          keyboardType="numeric"
           underlineColorAndroid = "black"
-          onChangeText={this.handleChange}
-          value={this.state.value} />
+          onChangeText={this.handleChangephase}
+          value={this.state.text2}/>
         </View>
+
+
         <View>
           <Text style={styles.text3}>)] + ay(</Text>
         </View>
         <View>
           <TextInput style ={styles.line1}
+          name="value of ay"
+          keyboardType="numeric"
           underlineColorAndroid = "black"
-          onChangeText={this.handleChange}
-          value={this.state.value} />
+          onChangeText={this.handleChangeay}
+          value3={this.state.text3}/>
         </View>
         <View>
             <Text style={styles.text2}>)cos[wt-Bz+(</Text>
         </View>
         <View>
-          <TextInput style ={styles.line1}
-          underlineColorAndroid = "black"
-          onChangeText={this.handleChange}
-          value={this.state.value} />
+        <TextInput style ={styles.line1}
+        name="value of phase"
+        keyboardType="numeric"
+        underlineColorAndroid = "black"
+        value={this.state.text2}/>
+
         </View>
+
         <View>
             <Text style={styles.text1}>)]</Text>
         </View>
