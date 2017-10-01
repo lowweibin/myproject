@@ -8,23 +8,25 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
-import Formula1 from './user_input/formula1';
+//import {Formula1 } from '/user_input/formula1.js';
+//import {Polarization} from '/user_input/polarization.js';
+import Formula1 from './user_input/formula1.js';
+import Formula2 from './user_input/formula2.js';
 
+
+//import Polarization from './user_input/polarization.js';
 //import Formula2 from './user_input/formula2';
 
 export default class AwesomeProject1 extends Component {
-
-
   render() {
     return (
 
-        <Formula1 />
-
-
-
+        <View style={styles.container}>
+          <Formula1 />
+          <Formula2 />
+        </View>
 
 
 

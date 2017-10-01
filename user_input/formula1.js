@@ -1,16 +1,9 @@
-/*<TextInput
-    style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-    onChangeText={(text) => this.setState({text})}
-    value={this.state.text}
-  />
-  */
-//{Colors.black}
-//import libraries for making a component
 import React, {Component} from 'react';
-import { Text , TextInput , StyleSheet , View } from 'react-native';
+import { Text , TextInput , StyleSheet , View , Button } from 'react-native';
+
 
 // Make a component
-export default class Inputs extends Component {
+export default class Formula1 extends Component {
 
 
   constructor(props) {
@@ -33,6 +26,8 @@ handleChangeay = (ay) => {
   this.setState({text3: ay})
   }
 
+handleEvent= () => {alert("hello")}
+
 //getValue = (value) => {
 //  alert('hello' + value)
 //}
@@ -51,7 +46,7 @@ render(){
           keyboardType="numeric"
           underlineColorAndroid = "black"
           onChangeText={this.handleChangeax}
-          value={this.state.test1}/>
+          value={this.state.text1}/>
         </View>
         <View>
           <Text style={styles.text2}>)cos[wt-Bz+(</Text>
@@ -93,7 +88,11 @@ render(){
             <Text style={styles.text1}>)]</Text>
         </View>
 
-
+        <View>
+        <Button
+          onPress={this.handleEvent}
+          title="Enter"/>
+        </View>
 
   </View>
 
@@ -103,14 +102,17 @@ render(){
 
 
 const styles = StyleSheet.create({
-  text1:{
-    width:20
+  text1: {
+    width:15,
+      fontSize : 11,
     },
-    text2:{
-      width:80
+    text2: {
+      width:63,
+        fontSize : 11,
     },
-    text3:{
-      width:43
+    text3: {
+      width:35,
+        fontSize : 11,
     },
     line1:{
       width: 35,
@@ -122,9 +124,8 @@ const styles = StyleSheet.create({
     },
 
     container:{
-      flex:1,
       flexDirection: 'row',
-
+      height: 35,
       justifyContent :'center',
       alignItems : 'center'
 
